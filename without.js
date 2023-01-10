@@ -32,4 +32,4 @@ const without = function(array, toRemove) {
 }
 
 console.log(assertArrayEquals(without([1, 2, 3], [3]), [1, 2])) // => true
-console.log(assertArrayEquals(without([1, 2, 3], [2, 1]), [3])) // => false
+console.log(assertArrayEquals(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"])) // => true
