@@ -12,7 +12,6 @@ const eqArrays = function(first, second) {
     return false
   }
 
-
   if (first.length !== second.length) {
     return false
   }
