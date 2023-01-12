@@ -1,5 +1,9 @@
 
-const assertArrayEquals = function(first, second) {
+const eqArrays = function(first, second) {
+  if (!Array.isArray(first) || !Array.isArray(second)) {
+    return false
+  }
+
   if (first.length !== second.length) {
     return false
   }
@@ -12,5 +16,14 @@ const assertArrayEquals = function(first, second) {
   return true
 }
 
-console.log(assertArrayEquals([1, 2, 3], [1, 2, 3], true)) // => true
-console.log(assertArrayEquals([1, 2, 3], [3, 2, 1], false)) // => false
+
+const assertArrayEquals = function(first, second) {
+  if (eqArrays(first, second)) {
+    console.log(`✅ Assertion Passed: [${first}] === [${second}]`)
+  } else {
+    console.log(`🛑Assertion Failed: [${first}] !== [${second}]`)
+  }
+}
+
+assertArrayEquals([1, 2, 3], [1, 2, 3], true) // => true
+assertArrayEquals([1, 2, 3], [3, 2, 1], false) // => false

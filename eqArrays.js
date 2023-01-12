@@ -8,6 +8,11 @@ const assertEquals = function(actual, expected) {
 }
 
 const eqArrays = function(first, second) {
+  if (!Array.isArray(first) || !Array.isArray(second)) {
+    return false
+  }
+
+
   if (first.length !== second.length) {
     return false
   }
