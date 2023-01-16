@@ -1,13 +1,37 @@
-// assertEquals(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-// assertEquals(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+const chai = require('chai')
+const eqArrays = require('../eqArrays')
 
-// assertEquals(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
-// assertEquals(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => false
+describe("#eqArrays", () => {
 
-// console.log('--- re ---')
+  it("returns true for 'eqArrays([1, 2, 3], [1, 2, 3])'", () => {
+    chai.expect(eqArrays([1, 2, 3], [1, 2, 3])).to.equal(true)
+  })
 
-// assertEquals(eqArrays([[2, 3], [3, 2]], [[2, 3], [3, 2]]), true) // true
-// assertEquals(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true) // => true
+  it(`returns true for 'eqArrays(["1", "2", "3"], ["1", "2", "3"])'`, () => {
+    chai.expect(eqArrays(["1", "2", "3"], ["1", "2", "3"])).to.equal(true)
+  })
 
-// assertEquals(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false) // => false
-// assertEquals(eqArrays([[2, 3], [4]], [[2, 3], 4]), false) // => false
+  it(`returns true for 'eqArrays([[2, 3], [3, 2]], [[2, 3], [3, 2]])'`, () => {
+    chai.expect(eqArrays([[2, 3], [3, 2]], [[2, 3], [3, 2]])).to.equal(true)
+  })
+
+  it(`returns true for 'eqArrays([[2, 3], [4]], [[2, 3], [4]])'`, () => {
+    chai.expect(eqArrays([[2, 3], [4]], [[2, 3], [4]])).to.equal(true)
+  })
+
+  it(`returns false for 'eqArrays([1, 2, 3], [3, 2, 1])'`, () => {
+    chai.expect(eqArrays([1, 2, 3], [3, 2, 1])).to.equal(false)
+  })
+
+  it(`returns false for 'eqArrays(["1", "2", "3"], ["1", "2", 3])'`, () => {
+    chai.expect(eqArrays(["1", "2", "3"], ["1", "2", 3])).to.equal(false)
+  })
+
+  it(`returns false for 'eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])'`, () => {
+    chai.expect(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])).to.equal(false)
+  })
+
+  it(`returns false for 'eqArrays([[2, 3], [4]], [[2, 3], 4])'`, () => {
+    chai.expect(eqArrays([[2, 3], [4]], [[2, 3], 4])).to.equal(false)
+  })
+})
