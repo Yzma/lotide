@@ -11,11 +11,4 @@ const tail = function(array) {
   return newArray
 }
 
-const words = ["Yo Yo", "Lighthouse", "Labs"]
-const words2 = ["1", "2", "3"]
-
-const tails1 = tail(words)
-const tails2 = tail(words2)
-
-console.log(tails1)
-console.log(tails2)
+module.exports = tail
