@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@caruso03/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEquals.js",
+  "description": "A mini clone of the Lodash library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Yzma/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrew Caruso",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Yzma/lotide/issues"
