@@ -29,6 +29,8 @@ const eqObjects = function(obj1, obj2) {
   return true
 }
 
+module.exports = eqObjects
+
 // const shirtObject = { color: "red", size: "medium" }
 // const anotherShirtObject = { size: "medium", color: "red" }
 // console.log(eqObjects(shirtObject , anotherShirtObject)) // => true
@@ -80,4 +82,4 @@ const eqObjects = function(obj1, obj2) {
 // assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
 // assertObjectsEqual({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) // => false
 
-module.exports = eqObjects
+
