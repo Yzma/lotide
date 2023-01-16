@@ -1,25 +1,4 @@
 
-const assertArrayEquals = function(first, second) {
-  if (first.length !== second.length) {
-    return false
-  }
-
-  for (let i = 0; i < first.length; i++) {
-    if (first[i] !== second[i]) {
-      return false
-    }
-  }
-  return true
-}
-
-const assertEquals = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: [${actual}] === [${expected}]`)
-  } else {
-    console.log(`🛑Assertion Failed: [${actual}] !== [${expected}]`)
-  }
-}
-
 const without = function(array, toRemove) {
   const newArray = []
 
@@ -31,5 +10,4 @@ const without = function(array, toRemove) {
   return newArray
 }
 
-console.log(assertArrayEquals(without([1, 2, 3], [3]), [1, 2])) // => true
-console.log(assertArrayEquals(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"])) // => true
+module.exports = without

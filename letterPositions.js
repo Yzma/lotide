@@ -15,4 +15,4 @@ const letterPositions = function(sentence) {
   return obj
 }
 
-console.log(letterPositions("lighthouse in the house"))
+module.exports = letterPositions
